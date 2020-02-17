@@ -1,0 +1,162 @@
+/* FONT - score */
+@font-face {
+    font-style: normal;
+    font-weight: 100;
+    font-family: 'score';
+    src: url('../fonts/score/scdream1.eot');
+    src: url('../fonts/score/scdream1.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/score/scdream1.woff2') format('woff2'),
+    url('../fonts/score/scdream1.woff') format('woff'),
+    url('../fonts/score/scdream1.ttf') format('truetype');
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 200;
+    font-family: 'score';
+    src: url('../fonts/score/scdream2.eot');
+    src: url('../fonts/score/scdream2.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/score/scdream2.woff2') format('woff2'),
+    url('../fonts/score/scdream2.woff') format('woff'),
+    url('../fonts/score/scdream2.ttf') format('truetype');
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 300;
+    font-family: 'score';
+    src: url('../fonts/score/scdream3.eot');
+    src: url('../fonts/score/scdream3.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/score/scdream3.woff2') format('woff2'),
+    url('../fonts/score/scdream3.woff') format('woff'),
+    url('../fonts/score/scdream3.ttf') format('truetype');
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'score';
+    src: url('../fonts/score/scdream4.eot');
+    src: url('../fonts/score/scdream4.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/score/scdream4.woff2') format('woff2'),
+    url('../fonts/score/scdream4.woff') format('woff'),
+    url('../fonts/score/scdream4.ttf') format('truetype');
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 500;
+    font-family: 'score';
+    src: url('../fonts/score/scdream5.eot');
+    src: url('../fonts/score/scdream5.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/score/scdream5.woff2') format('woff2'),
+    url('../fonts/score/scdream5.woff') format('woff'),
+    url('../fonts/score/scdream5.ttf') format('truetype');
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 600;
+    font-family: 'score';
+    src: url('../fonts/score/scdream6.eot');
+    src: url('../fonts/score/scdream6.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/score/scdream6.woff2') format('woff2'),
+    url('../fonts/score/scdream6.woff') format('woff'),
+    url('../fonts/score/scdream6.ttf') format('truetype');
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 700;
+    font-family: 'score';
+    src: url('../fonts/score/scdream7.eot');
+    src: url('../fonts/score/scdream7.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/score/scdream7.woff2') format('woff2'),
+    url('../fonts/score/scdream7.woff') format('woff'),
+    url('../fonts/score/scdream7.ttf') format('truetype');
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 800;
+    font-family: 'score';
+    src: url('../fonts/score/scdream8.eot');
+    src: url('../fonts/score/scdream8.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/score/scdream8.woff2') format('woff2'),
+    url('../fonts/score/scdream8.woff') format('woff'),
+    url('../fonts/score/scdream8.ttf') format('truetype');
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 900;
+    font-family: 'score';
+    src: url('../fonts/score/scdream9.eot');
+    src: url('../fonts/score/scdream9.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/score/scdream9.woff2') format('woff2'),
+    url('../fonts/score/scdream9.woff') format('woff'),
+    url('../fonts/score/scdream9.ttf') format('truetype');
+}
+
+/* common */
+html, body, div, span, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, form, fieldset, legend, input, select, textarea, table, col, colgroup, thead, tfoot, tbody, th, td, button {
+    margin: 0;
+    padding: 0;
+    color: #4a4a4a;
+    font-family: 'score', '맑은 고딕', '돋움', Dotum, Arial, sans-serif;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #4ac8f8;
+}
+
+::selection {
+    color: #fff;
+    background: #4ac8f8;
+}
+
+/* top button */
+.btn-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    opacity: 0;
+    background-color: #000;
+}
+
+.btn-top::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    content: '';
+    transform: translate(-50%, -50%);
+    background: url(../img/icon_arrow_up.svg) center no-repeat;
+    background-size: 24px;
+}
+
+@media (max-width: 575px) {
+    .btn-top {
+        right: 15px;
+        bottom: 15px;
+    }
+}
