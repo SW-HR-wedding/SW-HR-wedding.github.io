@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta property="og:title" content="강성운♥정혜리 결혼합니다.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="img/thumbnail.jpg">
+        <meta property="og:description" content="2020년 05월 02일 오전 11시, 노비아갈라">
+        <meta name="format-detection" content="telephone=no">
+        <title>강성운♥</title>
+        <link href="css/reset.css" rel="stylesheet">
+        <link href="css/swiper.min.css" rel="stylesheet">
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <button id="goTop" class="btn-top"></button>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery-easing-1.3.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="https://kit.fontawesome.com/98a45fac09.js" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                // visual swiper
+                var swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    updateOnWindowResize: true,
+                    on: {
+                        init: function () {
+                            new WOW().init();
+                        },
+                    }
+                });
+                swiper.on('slideChange', function () {
+                    new WOW().init();
+                });
+
+                // go top
+                $(document).on("click", "#goTop", function () {
+                    $("html,body").animate({"scrollTop": "0"});
+                    return false;
+                });
+
+                function btnTop() {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > 0) {
+                        $("#goTop").stop().show().animate({"opacity": "1"}, 400);
+                    } else {
+                        $("#goTop").stop().animate({"opacity": "0"}, 400, function () {
+                            $("#goTop").hide();
+                        });
+                    }
+                }
+
+                btnTop();
+                $(window).scroll(function () {
+                    btnTop();
+                });
+
+                // animation
+                new WOW().init();
+            })
+        </script>
+    </body>
+</html>
