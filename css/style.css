@@ -325,6 +325,6 @@ body {
     height: 24px;
     content: '';
     transform: translate(-50%, -50%);
-    background: url(../img/icon_arrow_up.svg) center no-repeat;
+    background: url(https://sw-hr-wedding.github.io//img/icon_arrow_up.svg) center no-repeat;
     background-size: 24px;
 }
