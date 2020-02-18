@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title>연습</title>
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/fakeLoader.min.css" rel="stylesheet">
     <link href="css/swiper.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+
+    </style>
 </head>
 <body>
 <header class="header">
@@ -33,16 +37,33 @@
         </nav>
     </div>
 </header>
-<div class="content">
-    <div class="section wow fadeIn" id="section1" data-wow-delay="50ms">
-        aaa
+<div class="section visual-wrap" id="section1">
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide-01"></div>
+            <div class="swiper-slide slide-02"></div>
+            <div class="swiper-slide slide-03"></div>
+            <div class="swiper-slide slide-04"></div>
+            <div class="swiper-slide slide-05"></div>
+        </div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
     </div>
-    <div class="section" id="section2">
-        bbb
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide-01"></div>
+            <div class="swiper-slide slide-02"></div>
+            <div class="swiper-slide slide-03"></div>
+            <div class="swiper-slide slide-04"></div>
+            <div class="swiper-slide slide-05"></div>
+        </div>
     </div>
-    <div class="scroll-top">
-        <button type="button" class="btn-top"></button>
-    </div>
+</div>
+<div class="section wow fadeIn" id="section2" data-wow-delay="50ms">
+    bbb
+</div>
+<div class="scroll-top">
+    <button type="button" class="btn-top"></button>
 </div>
 <div class="fakeLoader"></div>
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -62,6 +83,26 @@
         $("#mobileBtn").parent('.header').toggleClass('height-auto');
         return true;
     }
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        loop: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+            swiper: galleryThumbs
+        }
+    });
 </script>
 </body>
 </html>
