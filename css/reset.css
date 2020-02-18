@@ -1,0 +1,100 @@
+/* reset */
+*, html, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1;
+}
+
+ul, ol, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+em, address {
+    font-style: normal;
+}
+
+img {
+    font-size: 0;
+    line-height: 0;
+    border: 0 none;
+}
+
+caption {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #4a4a4a;
+}
+
+a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #4a4a4a;
+}
+
+p, span, h1, h2, h3, h4, h5, h6 {
+    word-break: keep-all;
+}
+
+/* IE - input close button delete */
+input::-ms-clear {
+    display: none;
+}
+
+/* RESET - chrome input background sky set */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 0;
+    -webkit-text-fill-color: #adb5bd;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input::placeholder {
+    color: #adb5bd;
+}
+
+input:-ms-input-placeholder {
+    color: #adb5bd;
+}
+
+input::-moz-placeholder {
+    color: #adb5bd;
+}
+
+input::-webkit-input-placeholder {
+    color: #adb5bd;
+}
