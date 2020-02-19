@@ -343,15 +343,6 @@ body {
     margin: 50px auto;
 }
 
-.gm-style-iw-d div {
-    font-weight: 500;
-    font-family: 'score', '맑은 고딕', '돋움', Dotum, Arial, sans-serif;
-}
-
-.gmnoprint {
-    display: none;
-}
-
 .location-wrap .location-txt .location-item {
     margin-bottom: 25px;
     padding-bottom: 25px;
