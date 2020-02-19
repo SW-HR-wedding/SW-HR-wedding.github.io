@@ -1,39 +1,9 @@
 $(document).ready(function () {
-    "use strict";
-
-    var header = $('.header');
-
-    setHeader();
-
-    $(window).on('resize', function () {
-        setHeader();
-    });
-
-    $(document).on('scroll', function () {
-        setHeader();
-    });
-
-    //header
-    function setHeader() {
-        if ($(window).scrollTop() > 50) {
-            header.addClass('scrolled');
-        } else {
-            header.removeClass('scrolled');
-        }
-    }
-
     // loading script
     $.fakeLoader({
         timeToHide: 700,
         bgColor: '#151d2b',
         spinner: "spinner5"
-    });
-
-    // header mobile nav
-    $('#mobileBtn').click(function () {
-        $(this).toggleClass('active');
-        $('#full-nav').toggleClass('open');
-        $(this).parent('.header').toggleClass('height-auto');
     });
 
     //scroll top
@@ -50,7 +20,4 @@ $(document).ready(function () {
             return false
         })
     });
-
-    // animation
-    new WOW().init();
 });

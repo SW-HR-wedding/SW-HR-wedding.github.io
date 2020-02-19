@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=ABeeZee|Nanum+Myeongjo&display=swap');
+
 /* FONT - score */
 @font-face {
     font-style: normal;
@@ -300,7 +302,33 @@ body {
 
 /* swiper content */
 .visual-wrap {
-    height: 500px;
+    height: 100%;
+    background: #fff;
+}
+
+.visual-wrap .visual-date {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0 40px;
+    background: #fff;
+}
+
+.visual-wrap .visual-date p {
+    padding: 0 3px 2px;
+    font-family: 'Nanum Myeongjo', cursive;
+    font-size: 25px;
+    border-bottom: 1px solid #9b9d9e;
+}
+
+.visual-wrap .visual-swiper {
+    height: calc(100% - 426px);
+    padding: 0 30px;
+}
+
+.visual-wrap .visual-date p + p {
+    padding-top: 10px;
 }
 
 .visual-wrap .swiper-container {
@@ -320,19 +348,11 @@ body {
 }
 
 .visual-wrap .swiper-slide.slide-02 {
-    background-image: url(../img/img_sample.jpg);
+    background-image: url(../img/img_sample2.jpg);
 }
 
 .visual-wrap .swiper-slide.slide-03 {
-    background-image: url(../img/img_sample.jpg);
-}
-
-.visual-wrap .swiper-slide.slide-04 {
-    background-image: url(../img/img_sample.jpg);
-}
-
-.visual-wrap .swiper-slide.slide-05 {
-    background-image: url(../img/img_sample.jpg);
+    background-image: url(../img/img_sample3.jpg);
 }
 
 .visual-wrap .gallery-top {
@@ -343,7 +363,7 @@ body {
 .visual-wrap .gallery-thumbs {
     box-sizing: border-box;
     height: 20%;
-    padding: 10px 0;
+    padding: 10px 0 0;
 }
 
 .visual-wrap .gallery-thumbs .swiper-slide {
@@ -354,6 +374,180 @@ body {
 
 .visual-wrap .gallery-thumbs .swiper-slide-thumb-active {
     opacity: 1;
+}
+
+.swiper-button-next.swiper-button-white, .swiper-button-prev.swiper-button-white {
+    width: 20px;
+    height: 30px;
+    background-size: 20px 30px;
+}
+
+.visual-wrap .visual-place {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0 80px;
+}
+
+.visual-wrap .visual-place h3 {
+    padding-bottom: 20px;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.visual-wrap .visual-place p {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.visual-wrap .visual-place p span {
+    color: #7a7c7d;
+}
+
+/* invitation */
+.invitation-wrap {
+    padding: 80px 30px;
+}
+
+.invitation-wrap .invitation-title {
+    position: relative;
+    z-index: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.invitation-wrap .invitation-title:before {
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    left: 0;
+    content: "Invitation";
+    text-transform: capitalize;
+    color: #e6e6e6;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.invitation-wrap .invitation-content .invitation-txt01 {
+    padding: 40px 0;
+}
+
+.invitation-wrap .invitation-content .invitation-txt01 p {
+    display: flex;
+    align-items: center;
+    font-family: 'Nanum Myeongjo', cursive;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.invitation-wrap .invitation-content .invitation-txt01 p + p {
+    padding-top: 15px;
+}
+
+.invitation-wrap .invitation-content .invitation-txt01 p span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    font-family: 'Nanum Myeongjo', cursive;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.invitation-wrap .invitation-content .invitation-txt01 p span a {
+    height: 16px;
+    padding-left: 12px;
+}
+
+.invitation-wrap .invitation-content .invitation-txt01 p span a img {
+    width: 16px;
+}
+
+.invitation-wrap .invitation-content .invitation-txt02 span {
+    display: block;
+    color: #7a7c7d;
+    font-family: 'Nanum Myeongjo', cursive;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+/* map */
+.location-wrap {
+    padding: 80px 30px;
+    background: #fff;
+}
+
+.location-wrap .location-title {
+    position: relative;
+    z-index: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.location-wrap .location-title:before {
+    position: absolute;
+    z-index: -1;
+    top: -15px;
+    left: 0;
+    content: "Location";
+    text-transform: capitalize;
+    color: #f1f1f3;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.location-wrap #mapCanvas {
+    width: 100%;
+    height: 200px;
+    margin: 50px auto;
+}
+
+.gm-style-iw-d div {
+    font-weight: 500;
+}
+
+.gmnoprint {
+    display: none;
+}
+
+.location-wrap .location-txt .location-item {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.location-wrap .location-txt .location-item:last-child {
+    margin: 0;
+    padding: 0;
+    border-bottom: 0;
+}
+
+.location-wrap .location-txt .location-item h3 {
+    font-family: 'Nanum Myeongjo', cursive;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.location-wrap .location-txt .location-item p {
+    padding-top: 15px;
+    color: #7a7c7d;
+    font-family: 'Nanum Myeongjo', cursive;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.location-wrap .location-txt .location-road h3 span {
+    display: block;
+    font-family: 'Nanum Myeongjo', cursive;
+}
+
+.location-wrap .location-txt .location-road h3 span:first-child {
+    padding-bottom: 10px;
 }
 
 /* top button */
