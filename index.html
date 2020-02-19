@@ -110,7 +110,8 @@
 <script src="js/fakeLoader.min.js"></script>
 <script src="js/main.js"></script>
 <script src="https://kit.fontawesome.com/98a45fac09.js" crossorigin="anonymous"></script>
-<script src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false&region=KR&key=AIzaSyAZgQonbgGvTmP3n_20GC8ebnZ6dbjD-R4"></script>
+<!--<script src="http://maps.googleapis.com/maps/api/js?v=3&sensor=false&region=KR&key=AIzaSyAZgQonbgGvTmP3n_20GC8ebnZ6dbjD-R4"></script>-->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d0f5385513f6f84e2de27a80a71978e2"></script>
 <script>
     var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 10,
@@ -132,29 +133,37 @@
         },
     });
 
-    // google map
-    function initialize() {
-        var myLatlng = new google.maps.LatLng(35.888179, 128.651753);
-        var myOptions = {
-            zoom: 15,
-            center: myLatlng,
-            // mapTypeId: google.maps.MapTypeId.TERRAIN
-        }
-        var map = new google.maps.Map(document.getElementById("mapCanvas"), myOptions);
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title: "동촌 노비아갈라"
-        });
-        var infowindow = new google.maps.InfoWindow({
-            content: "동촌 노비아갈라"
-        });
-        infowindow.open(map, marker);
-    }
+    var container = document.getElementById('mapCanvas');
+    var options = {
+        center: new kakao.maps.LatLng(35.888179, 128.651753),
+        level: 3
+    };
 
-    window.onload = function () {
-        initialize();
-    }
+    var map = new kakao.maps.Map(container, options);
+
+    // google map
+    // function initialize() {
+    //     var myLatlng = new google.maps.LatLng(35.888179, 128.651753);
+    //     var myOptions = {
+    //         zoom: 15,
+    //         center: myLatlng,
+    //         // mapTypeId: google.maps.MapTypeId.TERRAIN
+    //     }
+    //     var map = new google.maps.Map(document.getElementById("mapCanvas"), myOptions);
+    //     var marker = new google.maps.Marker({
+    //         position: myLatlng,
+    //         map: map,
+    //         title: "동촌 노비아갈라"
+    //     });
+    //     var infowindow = new google.maps.InfoWindow({
+    //         content: "동촌 노비아갈라"
+    //     });
+    //     infowindow.open(map, marker);
+    // }
+    //
+    // window.onload = function () {
+    //     initialize();
+    // }
 </script>
 </body>
 </html>
