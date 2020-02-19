@@ -120,7 +120,9 @@
         watchSlidesProgress: true,
     });
     var galleryTop = new Swiper('.gallery-top', {
-        autoplay: true,
+        autoplay: {
+            delay: 3000,
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -139,17 +141,18 @@
             // mapTypeId: google.maps.MapTypeId.TERRAIN
         }
         var map = new google.maps.Map(document.getElementById("mapCanvas"), myOptions);
-        var marker = new google.maps.Marker( {
+        var marker = new google.maps.Marker({
             position: myLatlng,
             map: map,
-            title:"동촌 노비아갈라"
+            title: "동촌 노비아갈라"
         });
-        var infowindow = new google.maps.InfoWindow( {
+        var infowindow = new google.maps.InfoWindow({
             content: "동촌 노비아갈라"
         });
-        infowindow.open(map,marker);
+        infowindow.open(map, marker);
     }
-    window.onload=function() {
+
+    window.onload = function () {
         initialize();
     }
 </script>
