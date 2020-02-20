@@ -183,15 +183,26 @@ body {
 }
 
 .visual-wrap .swiper-slide.slide-01 {
-    background-image: url(../img/img_sample.jpg);
+    background-image: url(../img/image_01.jpg);
 }
 
 .visual-wrap .swiper-slide.slide-02 {
-    background-image: url(../img/img_sample2.jpg);
+    background-image: url(../img/image_02.jpg);
+    background-position: top;
 }
 
 .visual-wrap .swiper-slide.slide-03 {
-    background-image: url(../img/img_sample3.jpg);
+    background-image: url(../img/image_03.jpg);
+}
+
+.visual-wrap .swiper-slide.slide-04 {
+    background-image: url(../img/image_04.jpg);
+    background-position: top;
+}
+
+.visual-wrap .swiper-slide.slide-05 {
+    background-image: url(../img/image_05.jpg);
+    background-position: top;
 }
 
 .visual-wrap .gallery-top {
@@ -297,7 +308,7 @@ body {
 
 .invitation-wrap .invitation-content .invitation-txt01 p span a {
     height: 16px;
-    padding-left: 12px;
+    padding-left: 15px;
 }
 
 .invitation-wrap .invitation-content .invitation-txt01 p span a img {
@@ -310,6 +321,16 @@ body {
     font-size: 14px;
     font-weight: bold;
     line-height: 25px;
+}
+
+@media (max-width: 374px) {
+    .invitation-wrap .invitation-content .invitation-txt01 p {
+        font-size: 13px;
+    }
+
+    .invitation-wrap .invitation-content .invitation-txt01 p span {
+        font-size: 17px;
+    }
 }
 
 /* map */
@@ -361,10 +382,16 @@ body {
 }
 
 .location-wrap .location-txt .location-item p {
-    padding-top: 15px;
+    padding-top: 10px;
     color: #7a7c7d;
     font-size: 14px;
     font-weight: bold;
+    line-height: 22px;
+}
+
+.location-wrap .location-txt .location-car p:last-child {
+    font-size: 12px;
+    line-height: 18px;
 }
 
 .location-wrap .location-txt .location-road h3 span {
@@ -418,3 +445,43 @@ body {
     background: url(../img/icon_arrow_up.svg) center no-repeat;
     background-size: 24px;
 }
+
+.customoverlay:nth-of-type(n) {
+    border: 0;
+    box-shadow: 0 1px 2px #888;
+}
+
+.customoverlay a {
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    background: #151d2b;
+    background: #151d2b url(http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+}
+
+.customoverlay .title {
+    display: block;
+    margin-right: 35px;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background: #fff;
+}
+
+.customoverlay:after {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    width: 22px;
+    height: 12px;
+    margin-left: -12px;
+    content: '';
+    background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+}
+
