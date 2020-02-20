@@ -142,7 +142,6 @@ body {
 
 /* swiper content */
 .visual-wrap {
-    height: 100%;
     background: #fff;
 }
 
@@ -162,7 +161,7 @@ body {
 }
 
 .visual-wrap .visual-swiper {
-    height: calc(100% - 426px);
+    height: 500px;
     padding: 0 30px;
 }
 
