@@ -325,6 +325,10 @@ body {
 }
 
 @media (max-width: 374px) {
+    .invitation-wrap {
+        padding: 80px 25px;
+    }
+    
     .invitation-wrap .invitation-content .invitation-txt01 p {
         font-size: 13px;
     }
