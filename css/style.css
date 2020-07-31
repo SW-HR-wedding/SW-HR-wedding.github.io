@@ -162,7 +162,7 @@ body {
 
 .visual-wrap .visual-swiper {
     height: 500px;
-    padding: 0 30px;
+    padding: 0 24px;
 }
 
 .visual-wrap .visual-date p + p {
@@ -261,7 +261,7 @@ body {
 
 /* invitation */
 .invitation-wrap {
-    padding: 80px 30px;
+    padding: 80px 24px;
 }
 
 .invitation-wrap .invitation-title {
@@ -325,10 +325,6 @@ body {
 }
 
 @media (max-width: 374px) {
-    .invitation-wrap {
-        padding: 80px 25px;
-    }
-    
     .invitation-wrap .invitation-content .invitation-txt01 p {
         font-size: 13px;
     }
@@ -340,7 +336,7 @@ body {
 
 /* map */
 .location-wrap {
-    padding: 60px 30px;
+    padding: 60px 24px;
     background: #fff;
 }
 
